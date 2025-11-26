@@ -62,15 +62,15 @@
     .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(11,18,32,0.06);display:flex;flex-direction:column}
     .card-media{background:#f3f6f9;padding:18px;display:flex;justify-content:center;align-items:center}
     .card-media img{max-width:220px;border-radius:8px}
-    .card-body{padding:16px;display:flex;flex-direction:column;gap:8px}
+    .card-body{padding:16px;display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center}
     .price{font-weight:700;color:#0b1220}
     .badge{display:inline-block;background:#f3f4f6;color:#1f2937;padding:6px 8px;border-radius:999px;font-size:0.75rem}
 
-    .sizes{display:flex;gap:8px;flex-wrap:wrap}
+    .sizes{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
     .size-btn{border:1px solid #e6e9ee;background:white;padding:8px 12px;border-radius:8px;cursor:pointer}
     .size-btn[aria-pressed="true"]{background:var(--accent);color:white;border-color:var(--accent-dark)}
 
-    .card-footer{padding:16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+    .card-footer{padding:16px;display:flex;gap:10px;align-items:center;justify-content:center}
 
     footer{padding:28px 0;color:var(--muted);border-top:1px solid #e6e9ee;margin-top:36px}
 
@@ -130,12 +130,13 @@
             <img src="tshirt-astronaut.jpeg" alt="T-shirt motif astronaute" />
           </div>
           <div class="card-body">
-            <h4 id="p1-title">T-shirt Astronaut</h4>
-            <div style="display:flex;justify-content:space-between;align-items:center">
+            <h4 id="p1-title" style="margin:0">T-shirt Astronaut</h4>
+            <div style="display:flex;align-items:center;gap:8px;justify-content:center">
               <div class="price">13 €</div>
               <div class="badge">En stock</div>
             </div>
             <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="XS" aria-pressed="false">XS</button>
               <button class="size-btn" data-size="S" aria-pressed="false">S</button>
               <button class="size-btn" data-size="M" aria-pressed="false">M</button>
               <button class="size-btn" data-size="L" aria-pressed="false">L</button>
@@ -154,12 +155,13 @@
             <img class="hover" src="sweatshirt-air-force-back.jpeg" alt="Sweatshirt Air Force dos" style="position:absolute;opacity:0;transition:opacity .3s;max-width:220px;border-radius:8px" />
           </div>
           <div class="card-body">
-            <h4 id="p2-title">Sweatshirt Air Force</h4>
-            <div style="display:flex;justify-content:space-between;align-items:center">
+            <h4 id="p2-title" style="margin:0">Sweatshirt Air Force</h4>
+            <div style="display:flex;align-items:center;gap:8px;justify-content:center">
               <div class="price">30 €</div>
               <div class="badge">Bientôt</div>
             </div>
             <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="XS" aria-pressed="false">XS</button>
               <button class="size-btn" data-size="S" aria-pressed="false">S</button>
               <button class="size-btn" data-size="M" aria-pressed="false">M</button>
               <button class="size-btn" data-size="L" aria-pressed="false">L</button>
@@ -177,12 +179,13 @@
             <img src="short-air-force.png" alt="Short Air Force" />
           </div>
           <div class="card-body">
-            <h4 id="p3-title">Short Air Force</h4>
-            <div style="display:flex;justify-content:space-between;align-items:center">
+            <h4 id="p3-title" style="margin:0">Short Air Force</h4>
+            <div style="display:flex;align-items:center;gap:8px;justify-content:center">
               <div class="price">10 €</div>
               <div class="badge">Bientôt</div>
             </div>
             <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="XS" aria-pressed="false">XS</button>
               <button class="size-btn" data-size="S" aria-pressed="false">S</button>
               <button class="size-btn" data-size="M" aria-pressed="false">M</button>
               <button class="size-btn" data-size="L" aria-pressed="false">L</button>
@@ -201,12 +204,13 @@
             <img class="hover" src="tshirt-los-angeles-back.jpeg" alt="T-shirt Los Angeles dos" style="position:absolute;opacity:0;transition:opacity .3s;max-width:220px;border-radius:8px" />
           </div>
           <div class="card-body">
-            <h4 id="p4-title">T-shirt Los Angeles</h4>
-            <div style="display:flex;justify-content:space-between;align-items:center">
+            <h4 id="p4-title" style="margin:0">T-shirt Los Angeles</h4>
+            <div style="display:flex;align-items:center;gap:8px;justify-content:center">
               <div class="price">15 €</div>
               <div class="badge">En stock</div>
             </div>
             <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="XS" aria-pressed="false">XS</button>
               <button class="size-btn" data-size="S" aria-pressed="false">S</button>
               <button class="size-btn" data-size="M" aria-pressed="false">M</button>
               <button class="size-btn" data-size="L" aria-pressed="false">L</button>
