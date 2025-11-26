@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amco Store — Vêtements & streetwear de qualité</title>
+  <meta name="description" content="Amco Store — Collections de t-shirts, sweatshirts et shorts. Style, simplicité et qualité. Livraison et commande par e‑mail.">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0f1724; /* deep navy */
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #06b6d4; /* teal */
+      --accent-dark: #0891b2;
+      --max-width: 1100px;
+      --radius: 12px;
+    }
+
+    *{box-sizing: border-box}
+    body{
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      margin:0; background: linear-gradient(180deg,#f7fafc 0%, #eef2f7 100%);
+      color:#0b1220; -webkit-font-smoothing:antialiased;
+      line-height:1.4;
+    }
+
+    .site-header{
+      background: white; border-bottom:1px solid #e6e9ee;
+      position: sticky; top:0; z-index:40;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;padding:18px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{
+      width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:inline-block;
+      box-shadow:0 4px 14px rgba(6,182,212,0.18);
+    }
+    .brand h1{font-size:1.1rem;margin:0}
+    .brand p{margin:0;font-size:0.8rem;color:var(--muted)}
+
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:inherit;text-decoration:none;font-weight:500}
+
+    .hero{
+      display:flex;align-items:center;gap:28px;padding:64px 0;background:linear-gradient(90deg,rgba(6,182,212,0.06),transparent);
+    }
+    .hero .left{flex:1}
+    .hero h2{font-size:2rem;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block}
+    .btn.ghost{background:transparent;border:1px solid #cfeceb;color:var(--accent)}
+
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;padding:40px 0}
+    .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(11,18,32,0.06);display:flex;flex-direction:column}
+    .card-media{background:#f3f6f9;padding:18px;display:flex;justify-content:center;align-items:center}
+    .card-media img{max-width:220px;border-radius:8px}
+    .card-body{padding:16px;display:flex;flex-direction:column;gap:8px}
+    .price{font-weight:700;color:#0b1220}
+    .badge{display:inline-block;background:#f3f4f6;color:#1f2937;padding:6px 8px;border-radius:999px;font-size:0.75rem}
+
+    .sizes{display:flex;gap:8px;flex-wrap:wrap}
+    .size-btn{border:1px solid #e6e9ee;background:white;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .size-btn[aria-pressed="true"]{background:var(--accent);color:white;border-color:var(--accent-dark)}
+
+    .card-footer{padding:16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid #e6e9ee;margin-top:36px}
+
+    @media (max-width:800px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .hero h2{font-size:1.5rem}
+    }
+  </style>
+  <meta name="google-site-verification" content="tdCwupql6GPspStMxyjrzpN6NF1kxF37ShQ4orJ0-_w" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <div>
+          <h1>Amco Store</h1>
+          <p>Style • Simplicité • Passion</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#nouveautes">Nouveautés</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="left">
+        <h2 id="hero-title">Vêtements bien pensés, pour un style affirmé</h2>
+        <p>Collections limitées de t-shirts, sweatshirts et shorts — design épuré, matériaux choisis.</p>
+        <div class="cta">
+          <a class="btn" href="#collections">Voir la collection</a>
+          <a class="btn ghost" href="#contact">Nous contacter</a>
+        </div>
+      </div>
+      <div class="right" aria-hidden="true">
+        <!-- image illustrative (optionnel) -->
+      </div>
+    </section>
+
+    <section id="collections">
+      <h3 style="margin-top:8px">Nos produits</h3>
+      <p style="color:var(--muted);margin:6px 0 18px">Sélectionnez une taille puis cliquez sur Commander pour envoyer une demande par e‑mail.</p>
+
+      <div class="products" role="list">
+
+        <!-- Product: T-shirt Astronaut -->
+        <article class="card" role="listitem" aria-labelledby="p1-title">
+          <div class="card-media">
+            <img src="tshirt-astronaut.jpeg" alt="T-shirt motif astronaute" />
+          </div>
+          <div class="card-body">
+            <h4 id="p1-title">T-shirt Astronaut</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">13 €</div>
+              <div class="badge">En stock</div>
+            </div>
+            <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="S" aria-pressed="false">S</button>
+              <button class="size-btn" data-size="M" aria-pressed="false">M</button>
+              <button class="size-btn" data-size="L" aria-pressed="false">L</button>
+              <button class="size-btn" data-size="XL" aria-pressed="false">XL</button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Commander</a>
+            <small style="color:var(--muted)">Livraison & retours disponibles</small>
+          </div>
+        </article>
+
+        <!-- Product: Sweatshirt Air Force -->
+        <article class="card" role="listitem" aria-labelledby="p2-title">
+          <div class="card-media image-hover">
+            <img class="main" src="sweatshirt-air-force-front.jpeg" alt="Sweatshirt Air Force face" />
+            <img class="hover" src="sweatshirt-air-force-back.jpeg" alt="Sweatshirt Air Force dos" style="position:absolute;opacity:0;transition:opacity .3s;max-width:220px;border-radius:8px" />
+          </div>
+          <div class="card-body">
+            <h4 id="p2-title">Sweatshirt Air Force</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">30 €</div>
+              <div class="badge">Bientôt</div>
+            </div>
+            <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="S" aria-pressed="false">S</button>
+              <button class="size-btn" data-size="M" aria-pressed="false">M</button>
+              <button class="size-btn" data-size="L" aria-pressed="false">L</button>
+              <button class="size-btn" data-size="XL" aria-pressed="false">XL</button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Commander</a>
+            <small style="color:var(--muted)">Précommande possible</small>
+          </div>
+        </article>
+
+        <!-- Product: Short Air Force -->
+        <article class="card" role="listitem" aria-labelledby="p3-title">
+          <div class="card-media">
+            <img src="short-air-force.png" alt="Short Air Force" />
+          </div>
+          <div class="card-body">
+            <h4 id="p3-title">Short Air Force</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">10 €</div>
+              <div class="badge">Bientôt</div>
+            </div>
+            <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="S" aria-pressed="false">S</button>
+              <button class="size-btn" data-size="M" aria-pressed="false">M</button>
+              <button class="size-btn" data-size="L" aria-pressed="false">L</button>
+              <button class="size-btn" data-size="XL" aria-pressed="false">XL</button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Commander</a>
+            <small style="color:var(--muted)">Précommande</small>
+          </div>
+        </article>
+
+        <!-- Product: T-shirt Los Angeles -->
+        <article class="card" role="listitem" aria-labelledby="p4-title">
+          <div class="card-media image-hover">
+            <img class="main" src="tshirt-los-angeles-front.jpeg" alt="T-shirt Los Angeles face" />
+            <img class="hover" src="tshirt-los-angeles-back.jpeg" alt="T-shirt Los Angeles dos" style="position:absolute;opacity:0;transition:opacity .3s;max-width:220px;border-radius:8px" />
+          </div>
+          <div class="card-body">
+            <h4 id="p4-title">T-shirt Los Angeles</h4>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="price">15 €</div>
+            </div>
+            <div class="sizes" role="group" aria-label="Tailles disponibles">
+              <button class="size-btn" data-size="S" aria-pressed="false">S</button>
+              <button class="size-btn" data-size="M" aria-pressed="false">M</button>
+              <button class="size-btn" data-size="L" aria-pressed="false">L</button>
+              <button class="size-btn" data-size="XL" aria-pressed="false">XL</button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a class="btn order-btn" href="#" data-email="u7444756096@gmail.com">Commander</a>
+            <small style="color:var(--muted)">Expédition rapide</small>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h3>Contact</h3>
+      <p style="color:var(--muted)">Pour commander ou poser une question, écrivez-nous à <a href="mailto:u7444756096@gmail.com">u7444756096@gmail.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>&copy; 2025 Amco Store — Tous droits réservés</div>
+      <div style="color:var(--muted)">Fait avec soin • Paiement à la livraison</div>
+    </div>
+  </footer>
+
+  <script>
+    // Accessible size selection and localized French messages
+    document.querySelectorAll('.card').forEach(card => {
+      const sizeButtons = card.querySelectorAll('.size-btn');
+      const orderBtn = card.querySelector('.order-btn');
+      let selectedSize = null;
+
+      sizeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Toggle pressed state
+          sizeButtons.forEach(b => { b.setAttribute('aria-pressed','false'); });
+          btn.setAttribute('aria-pressed','true');
+          selectedSize = btn.dataset.size;
+        });
+        // Support keyboard activation
+        btn.addEventListener('keydown', (e) => {
+          if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+        });
+      });
+
+      orderBtn.addEventListener('click', (e) => {
+        if (!selectedSize) {
+          e.preventDefault();
+          // Friendly French message
+          window.alert('Veuillez sélectionner une taille avant de commander.');
+          return;
+        }
+
+        const productName = card.querySelector('h4').innerText;
+        const email = orderBtn.dataset.email;
+        const subject = `Commande - ${productName}`;
+        const body = `Bonjour,\n\nJe souhaite commander : ${productName}.\nTaille : ${selectedSize}.\n\nMerci de me confirmer la disponibilité et les modalités d'expédition.`;
+        const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        // Set href then allow navigation
+        orderBtn.href = mailto;
+      });
+    });
+
+    // Simple hover swap for image-hover cards
+    document.querySelectorAll('.image-hover').forEach(holder => {
+      const main = holder.querySelector('.main');
+      const hover = holder.querySelector('.hover');
+      if (!hover) return;
+      holder.addEventListener('mouseover', () => { hover.style.opacity = 1; main.style.opacity = 0; });
+      holder.addEventListener('mouseout', () => { hover.style.opacity = 0; main.style.opacity = 1; });
+    });
+  </script>
+
+</body>
+</html>
