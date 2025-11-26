@@ -48,6 +48,14 @@
     nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
     nav a{color:inherit;text-decoration:none;font-weight:500}
 
+    .online-counter{
+      display:flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--muted);
+    }
+    .online-dot{
+      display:inline-block;width:8px;height:8px;background:#10b981;border-radius:50%;animation:pulse 2s infinite;
+    }
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+
     .hero{
       display:flex;align-items:center;gap:28px;padding:64px 0;background:linear-gradient(90deg,rgba(6,182,212,0.06),transparent);
     }
@@ -100,6 +108,11 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      
+      <div class="online-counter">
+        <span class="online-dot"></span>
+        <span id="online-count">0</span>
+      </div>
     </div>
   </header>
 
@@ -239,6 +252,18 @@
   </footer>
 
   <script>
+    // Online counter simulation
+    const onlineCountElement = document.getElementById('online-count');
+    let currentOnlineCount = Math.floor(Math.random() * 50) + 1; // Start with 1-50 people
+    onlineCountElement.textContent = currentOnlineCount;
+
+    // Simulate people joining and leaving
+    setInterval(() => {
+      const change = Math.floor(Math.random() * 5) - 2; // -2 to +2 change
+      currentOnlineCount = Math.max(1, currentOnlineCount + change); // At least 1 person
+      onlineCountElement.textContent = currentOnlineCount;
+    }, 8000); // Update every 8 seconds
+
     // Accessible size selection and localized French messages
     document.querySelectorAll('.card').forEach(card => {
       const sizeButtons = card.querySelectorAll('.size-btn');
